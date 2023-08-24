@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+          <title>SVVV ERP</title>
+<style>
+body 
+{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+.topnav 
+{
+  overflow: hidden;
+  background-color: dodgerblue;
+}
+
+.topnav a 
+{
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover 
+{
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active 
+{
+  color: white;
+}
+body 
+{
+  font-family: Arial, Helvetica, sans-serif;
+}
+* 
+{
+    box-sizing: border-box;
+}
+
+.form-inline 
+{  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label 
+{
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input 
+{
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button 
+{
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover 
+{
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) 
+{
+.form-inline input 
+  {
+    margin: 10px 0;
+  }
+  
+.form-inline 
+{
+    flex-direction: column;
+    align-items: stretch;
+}
+</style>
+    </head>
+    <body>
+        <center> 
+           <div class="topnav">
+                   <br/>
+                   <img src = "images/svvv.jpg" alt = "image not found" height= "80" width= "80"/>
+                   &nbsp;&nbsp;&nbsp;
+                   <h2 class="active" style="display: inline-block; color: white;">Shri Vaishnav Vidyapeeth Vishwavidyalya</h2>
+            </div>
+            
+            <h2>Registration</h2>
+            <br/>
+            <p style="font-weight:bold;">Please fill in this form to create an SVVV student ERP account</p>
+            <br/>
+</center>
+
+<br/>
+<form class="form-inline" action="EnrollChecker" method="POST">
+    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   
+   <label style="font-weight:bold;">Enrollment no.</label>
+  <br/>
+  <input type="text" name="username" placeholder="Enter your enrollment no." required>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <label style="font-weight:bold;">New Password</label>
+  <br/>
+  <input type="password" name="new" placeholder="Enter your new password" required>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  <label style="font-weight:bold;">Confirm Password</label>
+  <br/>
+  <input type="password" name="confirm" placeholder="Enter confirm password" required>
+  
+  <button type="submit">Submit</button>
+</form>
+        <br/>
+        <p style="text-align: center;">By creating an account you agree to our <a href="terms and policy.html" style="color: dodgerblue;">Terms & Privacy</a>.</p>
+        <br/>
+        <p style="text-align: center;">Sign up as a faculty <a href="ERP FRegister.html" style="color: dodgerblue;">Sign up?</a>.</p>
+        <br/>
+        <p style="text-align: center;">Already have an account? <a href="ERP login.html" style="color: dodgerblue;">Sign in</a>.</p>
+    </body>
+</html>

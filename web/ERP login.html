@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>Welcome to ERP</title>
+        <script type = "text/javascript">
+             
+       function generateCaptcha()
+       {
+         var cap = new Array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z');
+
+         var i;
+
+         for(i=0;i<4;i++)
+         { 
+           var a = cap[Math.floor(Math.random() * cap.length)];
+           var b = cap[Math.floor(Math.random() * cap.length)];
+           var c = cap[Math.floor(Math.random() * cap.length)];
+           var d = cap[Math.floor(Math.random() * cap.length)];
+         }  
+          
+         var code = a + b + c + d;
+         document.getElementById("mainCaptcha").value = code  
+       } 
+
+       function	checkValidCaptcha()
+       {
+	 var s1 = removeSpaces(document.getElementById("mainCaptcha").value);
+         var s2 = removeSpaces(document.getElementById("txtinput").value);
+ 
+         if(s1 == s2)
+         {
+		   document.getElementById("success").innerHTML = "Form is validated successfully";
+		   return true;
+         } 		 
+	 else
+	     {
+               document.getElementById("error").innerHTML = "Please enter valid Captcha";
+	       return false;
+             }
+ 	}
+	   
+	function removeSpaces(string)
+	{
+	  return string.split(' ').join("");
+	}
+       </script>    
+<style>
+button[type=submit] 
+{
+  width: 50%;
+  background-color: orange;
+  color: white;
+  padding: 6px 5px;
+  margin: 5px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+        <script src="https://kit.fontawesome.com/57eeca9c9a.js" crossorigin="anonymous"></script>
+        <link href = "login.css" rel="stylesheet" type="text/css" />    
+    </head>
+    <body onload="generateCaptcha();">
+        <div class="form-control">
+        <center>
+        <form action="ERPloginChecker" method="POST">
+            <img src = "images/svvv.jpg" alt = "image not found" height="150" width="150"/> 
+            <br/><br/>
+            <b>Sign In</b>
+            <br/><br/>
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-users"></i></td>
+                    <td>Username:<input type="username" name="username" placeholder="Enter your username" required></td>
+                </tr>
+                </table>
+               <table>   
+                <tr>
+                    <td><i class="fa-sharp fa-solid fa-lock"></i></td>
+                    <td>Password:<input type="password" name="password" placeholder="Enter your password" required></td>
+                </tr>  
+             </table>
+             <br/>
+               <table>
+                   <tr>           
+                     <td>
+                         <input type = "text" id = "mainCaptcha" name="mainc" readonly="readonly" style="background-color: black; color: white; width: 30%; font-size: 18px; border-color: black;"/>                      
+                         <button style="padding: 2px; background-color: dodgerblue; border: 1px solid #ddd; color: white; cursor: pointer;" onclick="generateCaptcha();"><i class="fa-solid fa-rotate"></i></button>
+                      </td>
+                  </tr> 
+           
+                  <tr> 
+                      <td><input type = "text" id = "txtinput" name="inputc" placeholder = "Enter valid captcha"></td>
+                  </tr>
+
+                  <tr>
+                      <td><span id = "error" style = "color: red;"></span></td>
+                  </tr> 
+
+                  <tr>
+                      <td><span id = "success" style = "color: green;"></span></td>
+                  </tr>
+               </table>    
+               <table>
+                <tr>
+                    <td><button style="padding: 10px 20px; background-color: dodgerblue; border: 1px solid #ddd; color: white; cursor: pointer;" type="submit" onclick="checkValidCaptcha();">Login</button>
+                </tr>    
+            </table>
+             &nbsp;&nbsp;&nbsp;&nbsp; <a href="ERP registration.html" style="color: dodgerblue;">Sign up</a> 
+        </form>  
+               <label style="color: white;">Site Compatible -&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-chrome" style="color: #f70202;"></i>Google Chrome 70+ , &nbsp; <i class="fa-brands fa-edge" style="color: #3a80f8;"></i>&nbsp;Microsoft Edge 89+ , &nbsp;<i class="fa-brands fa-firefox" style="color: #f27107;"></i>&nbsp;Firefox 65+ 
+</label> 
+        </center>    
+        </div>    
+    </body>
+</html>

@@ -1,0 +1,140 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9 Jul, 2023, 5:27:00 AM
+    Author     : mayank_matkar
+*/
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;   
+}
+body
+{
+    overflow: hidden;
+}
+.container
+{
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    background: dodgerblue;
+    z-index: 1;
+    transition: 0.5s ease;
+    transform: translateX(-250px);
+}
+.container .head
+{
+    color: dodgerblue;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    background: white;
+}
+ol
+{
+    width: 100%;
+    list-style: none;
+}
+ol li
+{
+  display: block;
+  width: 100%
+}
+ol li a
+{
+  color: white;
+  padding: 15px 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  transition: 0.3s;
+  overflow: hidden;
+  text-transform: capitalize;
+}
+ol li a i
+{
+  width: 70px;
+  font-size: 25px;
+  text-align: center;
+  padding-left: 30px;
+}
+ol li:hover a
+{
+   color: white;
+   letter-spacing: 3px;
+}
+input
+{
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+span
+{
+  position: absolute;
+  right: -40px;
+  top: 30px;
+  font-size: 25px;
+  border-radius: 3px;
+  color: white;
+  padding: 3px 8px;
+  cursor: pointer;
+  background: #000;
+}
+#bars
+{
+  background: dodgerblue;  
+}
+#check:checked ~ .container
+{
+  transform: translateX(0);  
+}
+#check:checked ~ .container #bars
+{
+  display: none; 
+}
+section
+{
+  min-height: 100vh;
+  background: url(svvv.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+  filter: brightness(60%);
+}
+#check:checked ~ section
+{
+  transform: scale(1.2);
+  filter: brightness(20%);
+}            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
